@@ -3,10 +3,6 @@ Welcome to the ShopMate login page! This page allows users to securely log in an
 Step 1: Clone the Repository
 To start using the ShopMate project, clone this repository:
 
-bash
-Copy
-git clone https://github.com/yourusername/shopmate.git
-Navigate into the cloned directory:
 
 bash
 Copy
