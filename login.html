@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .textbox {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #777;
+        }
+
+        /* Google Sign-In button styling */
+        .g-signin2 {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /* Sign-Up button styling */
+        .signup-btn {
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Include Google Platform Script for Google Sign-In -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Firebase SDKs for Authentication and Google Sign-In -->
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="textbox">
+                    <input type="text" placeholder="Username" id="username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
+                <input type="submit" value="Login" class="btn">
+            </form>
+            <p>OR</p>
+            <!-- Google Sign-In button -->
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <p>Don't have an account?</p>
+            <!-- Sign-Up Button -->
+            <button class="signup-btn" onclick="window.location.href='signup.html';">Sign Up</button>
+        </div>
+    </div>
+
+    <script>
+        // Predefined usernames and passwords (for testing)
+        const users = {
+            "user1": "password1",
+            "user2": "password2",
+            "user3": "password3"
+        };
+
+        // Handle login form submission
+        document.getElementById("login-form").addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check if the entered username and password are valid
+            if (users[username] && users[username] === password) {
+                console.log("User signed in manually:", username);
+                // Redirect to Demo.html page
+                window.location.href = "../Apex Sample/Demo.html"; 
+            } else {
+                alert("Invalid username or password! Please try again.");
+            }
+        });
+
+        // Google Sign-In handler (if you have Firebase integrated for Google sign-in)
+        function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+
+            // Use the ID token to sign in with Firebase
+            const credential = firebase.auth.GoogleAuthProvider.credential(id_token);
+            firebase.auth().signInWithCredential(credential)
+                .then((result) => {
+                    console.log("User signed in with Google:", result.user);
+                    // Redirect after Google sign-in
+                    window.location.href = "../Apex Sample/Demo.html"; 
+                })
+                .catch((error) => {
+                    console.error("Error signing in with Google:", error);
+                });
+        }
+
+    </script>
+</body>
+</html>
