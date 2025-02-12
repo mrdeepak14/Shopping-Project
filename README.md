@@ -1,6 +1,6 @@
 # Shopping-Project
 Welcome to the ShopMate login page! This page allows users to securely log in and access the shopping platform using Firebase Authentication (including Google Sign-In or manual username/password login).
-https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22Screenshot%202025-02-12%20at%203.35.53%E2%80%AFPM.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-02-12T10%3A13%3A36.486Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2F3f5f147ecb08422b%2FScreenshot%25202025-02-12%2520at%25203.35.53%25E2%2580%25AFPM.png%3FExpires%3D1833963216%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DeSLUbPIDhJEFGOC1ZKLH-I0d0Q42ZuvekbyeKz-s4rrimZJGbyvmQ9kCFc5dYKxILRkOK8nEY4N7MHk7d9V3u59QSAdcg4Ct8ToqaZ93VGCL8VT-JpGHW7~yXACIZKF27QjuVf7yR-MkWgXG0j6kzOoyZxab8Xexj1J-Ajf-woYgg14UMaSdMe3ymk4zSUI0c-ceID5AfWvd4d3dAWYv73hXHpHZA8As5FTZFQM5X0cGMKONAyXs33nvCl11r14DvZrlnXmlB9BSQ9qNQ3k9h6XEF9H9qnMypyHlZxmF4d05I1I9oJl3Cr7rTNXJhFc0ikkkuuhtfzwj4XHgTSKR4A__%22%7D
+
 Step 1: Clone the Repository
 To start using the ShopMate project, clone this repository:
 
