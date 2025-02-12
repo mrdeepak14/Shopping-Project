@@ -4,8 +4,28 @@ Welcome to the ShopMate login page! This page allows users to securely log in an
 Step 1: Clone the Repository
 To start using the ShopMate project, clone this repository:
 
+![Screenshot 2025-02-12 at 3 35 53 PM](https://github.com/user-attachments/assets/9f007a83-01d4-489c-a1ec-f709ed189c6e)
 
-bash
+Manual Login: Use one of the predefined username and password combinations to log in manually. Here are a few combinations you can use:
+
+Username: user1
+Password: password1
+
+Username: user2
+Password: password2
+
+Username: user3
+Password: password3
+
+
+<img width="1470" alt="Screenshot 2025-02-12 at 3 36 53 PM" src="https://github.com/user-attachments/assets/ea3a470d-6954-4dc2-a08a-05c20ff6a9e6" />
+ /Demo.html       # The page users are redirected to after login
+
+<img width="1470" alt="Screenshot 2025-02-12 at 3 36 58 PM" src="https://github.com/user-attachments/assets/b517866f-66de-4397-975e-ed81386924c4" />
+
+
+bash<img width="1470" alt="Screenshot 2025-02-12 at 3 37 01 PM" src="https://github.com/user-attachments/assets/7e73e166-60dc-48ed-9096-78439fb74e9e" />
+
 Copy
 cd shopmate
 Step 2: Set Up Firebase Authentication
